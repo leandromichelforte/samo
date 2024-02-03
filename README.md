@@ -1,5 +1,4 @@
 ## Overview
-
 This is an application whose main and only function is to show the best and worst solution scenario for the Water Jug problem.
 
 ## Screenshots
@@ -261,7 +260,9 @@ This is an application whose main and only function is to show the best and wors
 - [Equatable](https://pub.dev/packages/equatable)
 - [Mocktail](https://pub.dev/packages/mocktail)
 
-
+## Task management
+- I created a simple [Trello Project](https://trello.com/invite/b/ZT5Ylrht/ATTIaa225265fb74e234f541d23438ffb533531EAF9F/samo) to organize my tasks during the project
+- I created the tasks at the beginning of the project to follow a logical order so I maintained the task delivery process as best as possible
 
 ## Support and Feedback
 If you have any questions or feedback please contact me [leandromichel2306@gmail.com](mailto:leandromichel2306@gmail.com)
