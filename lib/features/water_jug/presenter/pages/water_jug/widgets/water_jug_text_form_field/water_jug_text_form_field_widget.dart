@@ -25,6 +25,7 @@ class WaterJugTextFormFieldWidget extends StatelessWidget {
         FilteringTextInputFormatter.digitsOnly
       ],
       decoration: InputDecoration(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 12),
         label: Text(labelText),
         border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
