@@ -48,7 +48,7 @@ void main() {
           ),
         ).thenReturn(const AllScenariosEntity(
           bestScenarioStepList: [],
-          wrostScenarioStepList: [],
+          worstScenarioStepList: [],
         ));
         return cubit;
       },

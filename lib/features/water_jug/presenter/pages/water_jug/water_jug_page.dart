@@ -72,8 +72,8 @@ class _WaterJugPageState extends State<WaterJugPage> {
                     ),
                     const Divider(),
                     ScenarioTableWidget(
-                      tableTitle: 'Wrost Scenario',
-                      stepEntity: state.allScenarios.wrostScenarioStepList,
+                      tableTitle: 'worst Scenario',
+                      stepEntity: state.allScenarios.worstScenarioStepList,
                     ),
                   ]
                 ],
