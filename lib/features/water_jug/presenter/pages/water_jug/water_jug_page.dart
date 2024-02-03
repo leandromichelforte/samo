@@ -43,7 +43,10 @@ class _WaterJugPageState extends State<WaterJugPage> {
             context: context,
             builder: (_) {
               return AlertDialog.adaptive(
-                content: Text(state.errorMessage),
+                icon: const Icon(Icons.close_rounded),
+                content: ErrorDialogWidget(
+                  errorMessage: state.errorMessage,
+                ),
               );
             },
           );

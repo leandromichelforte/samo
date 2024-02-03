@@ -17,6 +17,7 @@ final class WaterJugCubit extends Cubit<WaterJugState> {
   final ValidateValuesUsecase _validateValuesUsecase;
 
   void getScenarios() {
+    emit(state.copyWith());
     final validateValuesEither = _validateValuesUsecase(
       jugOne: state.jugOne,
       jugTwo: state.jugTwo,

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:samo/core/injections/injections.dart';
 import 'package:samo/core/routes/named_routes.dart';
 import 'package:samo/core/routes/routes.dart';
 
 void main() {
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   WaterJugInject.inject();
   runApp(const App());
 }
