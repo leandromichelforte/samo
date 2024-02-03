@@ -15,13 +15,12 @@ This is an application whose main and only function is to show the best and wors
 ## Features
 - See the worst and best solution scenarios for the Water Jug Problem according the goals:
     -  Measure the **Wanted Amount** only with **Jug 1** and **Jug 2** values
-    -  Create a UI where users can input any values for **Jug 1**, **Jug 2**, and **Wanted Amount**, and see the step-by-step solution
+    -  Create a UI where users can input any values for **Jug 1**, **Jug 2**, **Wanted Amount** and see the solution step by step
     -  Display **No Solution** when it's not possible
 
-- Respecting the limitations:
-    - Allowed actions: fill, empty and transfer (between the two jugs only)
-    - **Jug 1**, **Jug 2** and **Wanted Amount** are greater than 0
-    - **Jug 1**, **Jug 2** and **Wanted Amount** are integers (no decimals, fractions)
+- Respect the limitations:
+    - Allowed actions: **fill**, **empty** and **transfer** (between the two jugs only)
+    - **Jug 1**, **Jug 2** and **Wanted Amount** are greater than 0 and integers (no decimals, fractions)
 
 ## Algorithm Approach
 - I'm based on the fact that we can only solve this problem if the **GCD** (Great Commom Divisor) from Jug 1 and Jug 2 can divide the Wanted Amount
@@ -222,7 +221,7 @@ This is an application whose main and only function is to show the best and wors
       ),
     );
     ```
-- Used Mockito to make the test coverage over 95%
+- Used Mocktail to make the test coverage over 95%
 ![test_coverage](https://i.ibb.co/TcgpShC/Screenshot-2024-02-02-at-23-38-44.png)
 
 ## Development environment (flutter doctor)
@@ -232,11 +231,9 @@ This is an application whose main and only function is to show the best and wors
 - VS Code (version 1.85.2)
 
 ## Getting Started
-Follow these instructions to get the app up and running on your local machine.
-### Prerequisites
-- [Flutter](https://flutter.dev/docs/get-started/install) must be installed on your machine.
+- [Flutter](https://flutter.dev/docs/get-started/install) must be installed on your machine
+- You need to have a mobile device(Android or iOS) with you
 
-### Installation and testing
 1. Clone the repository
     ```bash
     git clone https://github.com/leandromichelforte/samo.git
