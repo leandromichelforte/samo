@@ -16,9 +16,6 @@ final class ValidateValuesUsecaseImpl implements ValidateValuesUsecase {
   }) {
     if (jugOne <= 0 || jugTwo <= 0 || wantedAmount <= 0) {
       return const Left('All values must be greather than 0');
-    } else if (jugOne.isEven && jugTwo.isEven && wantedAmount.isOdd) {
-      return const Left(
-          'No solution\nAn odd number cannot be reached from two even numbers');
     } else if (wantedAmount > max(jugOne, jugTwo)) {
       return const Left(
         'No Solution\nWanted Amount must be lower than the each jug values',
