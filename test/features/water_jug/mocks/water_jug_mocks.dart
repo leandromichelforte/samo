@@ -7,7 +7,7 @@ sealed class WaterJugMocks {
     bestScenarioStepList: [
       stepEntity,
     ],
-    wrostScenarioStepList: [
+    worstScenarioStepList: [
       stepEntity,
       stepEntity2,
     ],
@@ -16,7 +16,7 @@ sealed class WaterJugMocks {
     bestScenarioStepList: [
       stepEntity,
     ],
-    wrostScenarioStepList: [
+    worstScenarioStepList: [
       stepEntity,
       stepEntity2,
     ],
