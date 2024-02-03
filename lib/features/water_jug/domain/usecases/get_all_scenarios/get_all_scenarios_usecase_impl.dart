@@ -35,7 +35,7 @@ final class GetAllScenariosUsecaseImpl implements GetAllScenariosUsecase {
         stepListFirstScenario.length,
         stepListSecondScenario.length,
       )]!,
-      wrostScenarioStepList: scenarios[max(
+      worstScenarioStepList: scenarios[max(
         stepListFirstScenario.length,
         stepListSecondScenario.length,
       )]!,
