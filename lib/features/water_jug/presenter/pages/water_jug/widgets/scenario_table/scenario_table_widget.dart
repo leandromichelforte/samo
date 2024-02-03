@@ -43,36 +43,44 @@ class ScenarioTableWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                ..._stepList
-                    .map((step) => TableRow(
-                          children: [
-                            TableCell(
-                              verticalAlignment:
-                                  TableCellVerticalAlignment.middle,
-                              child: Text(
-                                '${step.jugOne}',
-                                textAlign: TextAlign.center,
+                ..._stepList.map(
+                  (step) {
+                    final isLastStep = step == _stepList.last;
+                    return TableRow(
+                      children: [
+                        TableCell(
+                          verticalAlignment: TableCellVerticalAlignment.middle,
+                          child: Text(
+                            '${step.jugOne}',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        TableCell(
+                          verticalAlignment: TableCellVerticalAlignment.middle,
+                          child: Text(
+                            '${step.jugTwo}',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        TableCell(
+                          verticalAlignment: TableCellVerticalAlignment.middle,
+                          child: Text.rich(
+                            TextSpan(children: [
+                              TextSpan(
+                                text: step.description,
                               ),
-                            ),
-                            TableCell(
-                              verticalAlignment:
-                                  TableCellVerticalAlignment.middle,
-                              child: Text(
-                                '${step.jugTwo}',
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                            TableCell(
-                              verticalAlignment:
-                                  TableCellVerticalAlignment.middle,
-                              child: Text(
-                                step.description,
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                          ],
-                        ))
-                    .toList(),
+                              if (isLastStep)
+                                const TextSpan(
+                                    text: ' (SOLVED)',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold))
+                            ]),
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                ).toList(),
               ],
             ),
           ],

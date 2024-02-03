@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class WaterJugTextFormFieldWidget extends StatelessWidget {
   const WaterJugTextFormFieldWidget({
@@ -19,6 +20,10 @@ class WaterJugTextFormFieldWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: _controller,
+      keyboardType: TextInputType.number,
+      inputFormatters: <TextInputFormatter>[
+        FilteringTextInputFormatter.digitsOnly
+      ],
       decoration: InputDecoration(
         label: Text(labelText),
         border: const OutlineInputBorder(

@@ -3,7 +3,7 @@ import 'package:samo/core/injections/injections.dart';
 import 'package:samo/core/routes/named_routes.dart';
 import 'package:samo/core/routes/routes.dart';
 
-void main() async {
+void main() {
   WaterJugInject.inject();
   runApp(const App());
 }
