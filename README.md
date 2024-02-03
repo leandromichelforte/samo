@@ -13,9 +13,9 @@ This is an application whose main and only function is to show the best and wors
 ![no_solutions_case](https://i.ibb.co/nL86MP1/Simulator-Screen-Shot-i-Phone-14-2024-02-03-at-02-03-37.png)
 
 ## Features
-- See the wrost and best solution scenarios for the Water Jug Problem according the goals:
+- See the worst and best solution scenarios for the Water Jug Problem according the goals:
     -  Measure the **Wanted Amount** only with **Jug 1** and **Jug 2** values
-    -  Createa UI where users can input any values for **Jug 1**, **Jug 2**, and **Wanted Amount**, and see the step-by-step solution
+    -  Create a UI where users can input any values for **Jug 1**, **Jug 2**, and **Wanted Amount**, and see the step-by-step solution
     -  Display **No Solution** when it's not possible
 
 - Respecting the limitations:
@@ -33,7 +33,7 @@ This is an application whose main and only function is to show the best and wors
         return _gcd(x: y, y: x % y);
     }
     ```
-- First of wall I check if all limitations are satisfied with the **ValidateValuesUsecase**:
+- First of all I check if all limitations are satisfied with the **ValidateValuesUsecase**:
     - The first if statement I check if all values are greater than zero. If not, I return a Left saying _"All values must be greather than 0"_
     - The second if statement I check if the Wanted Amount is greater than the each Jug Value. If so, I return a Left saying _"No Solution. Wanted Amount must be lower than the each jug values"_
      - The third if statement I check if GCD from Jug 1 and Jug 2 cannot divide the Wanted Amount. If so, I return a Left saying _"No Solution. Great commom divisor between the jug values must be able to divide the wanted amount"_
@@ -113,10 +113,10 @@ This is an application whose main and only function is to show the best and wors
     }
     return stepsList;
     ```
-- The **GetAllScenariosUsecase** is used to get the best and the wrost solution scenario for the Water Jug Problem.
+- The **GetAllScenariosUsecase** is used to get the best and the worst solution scenario for the Water Jug Problem.
     - I use the **GetStepListUsecase** to get the List<StepEntity> with the jugOne being the first and the second value
     - I create a map with the key being the length of each list and the value being the list itself.
-    - I return an AllScenarioEntity setting the bestScenarioStepList and the wrostScenarioStepList variables using the min and max method passing the length of the both list.
+    - I return an AllScenarioEntity setting the bestScenarioStepList and the worstScenarioStepList variables using the min and max method passing the length of the both list.
     ``` bash
     final List<StepEntity> stepListFirstScenario = _getStepListUsecase(
       jugOne: jugOne,
@@ -137,7 +137,7 @@ This is an application whose main and only function is to show the best and wors
         stepListFirstScenario.length,
         stepListSecondScenario.length,
       )]!,
-      wrostScenarioStepList: scenarios[max(
+      worstScenarioStepList: scenarios[max(
         stepListFirstScenario.length,
         stepListSecondScenario.length,
       )]!,
@@ -167,19 +167,19 @@ This is an application whose main and only function is to show the best and wors
     - Jug 1: 2
     - Jug 2: 3
     - Wanted Value: 10
-- Output 4: **No Solution**
+- Output 4: **No Solution. Wanted Amount must be lower than the each jug values**
 
 - Input 5:
     - Jug 1: 2
     - Jug 2: 4
     - Wanted Value: 3
-- Output 5: **No Solution**
+- Output 5: **No Solution. Great commom divisor between the jug values must be able to divide the wanted amount**
 
-- Input 5:
+- Input 6:
     - Jug 1: 3
     - Jug 2: 5
     - Wanted Value: 4
-- Output 5 - Best Scenario (6 steps):
+- Output 6 - Best Scenario (6 steps):
 
 | Jug 1: | Jug 2: | Description:                        |
 |-------|-------|---------------------------------------|
@@ -190,7 +190,7 @@ This is an application whose main and only function is to show the best and wors
 | 5     | 2     | Fill Jug 1                            |
 | 4     | 3     | Transfer from Jug 1 to Jug 2 (SOLVED) |
 
-- Output 2 - Wrost Scenario (8 steps):
+- Output 6 - Worst Scenario (8 steps):
 
 | Jug 1: | Jug 2: | Description:                        |
 |-------|-------|---------------------------------------|
