@@ -21,7 +21,7 @@ void main() {
     }
 
     test(
-        'should return Left with error message when jug values are less than or equal to 0',
+        'should return Left with error message all values must be greather than 0',
         () {
       const jugOne = 0;
       const jugTwo = 5;
@@ -34,7 +34,7 @@ void main() {
         wantedAmount: wantedAmount,
       );
 
-      expect(result, const Left('Jug values has to be greather than 0'));
+      expect(result, const Left('All values must be greather than 0'));
     });
 
     test(
@@ -51,7 +51,10 @@ void main() {
         wantedAmount: wantedAmount,
       );
 
-      expect(result, const Left('No Solution'));
+      expect(
+          result,
+          const Left(
+              'No Solution\nWanted Amount must be lower than the each jug values'));
     });
 
     test(
@@ -68,7 +71,10 @@ void main() {
         wantedAmount: wantedAmount,
       );
 
-      expect(result, const Left('No Solution'));
+      expect(
+          result,
+          const Left(
+              'No Solution\nGreat commom divisor between the jug values must be able to divide the wanted amount'));
     });
 
     test('should return Right with null when all conditions are met', () {
