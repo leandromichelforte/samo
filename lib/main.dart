@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:samo/core/injections/injections.dart';
 import 'package:samo/core/routes/named_routes.dart';
 import 'package:samo/core/routes/routes.dart';
 
-void main() {
+void main() async {
+  WaterJugInject.inject();
   runApp(const App());
 }
 
@@ -11,6 +13,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Samo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
