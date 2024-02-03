@@ -54,6 +54,7 @@ void main() {
       },
       act: (cubit) => cubit.getScenarios(),
       expect: () => [
+        isA<WaterJugInitialState>(),
         isA<WaterJugSuccessState>(),
       ],
     );
@@ -72,6 +73,7 @@ void main() {
       },
       act: (cubit) => cubit.getScenarios(),
       expect: () => [
+        isA<WaterJugInitialState>(),
         isA<WaterJugErrorState>(),
       ],
     );
